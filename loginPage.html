@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOGIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/login_media.css">
+  <link href="https://fonts.googleapis.com/css?family=Signika:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper-flex-col body-wrapper">
+  <div class="box login-box">
+    <div class="wrapper-flex-col login-wrapper">
+        <form class="form-align" onsubmit="return false">
+          <div class="group login-header">
+              HELP University Class System
+          </div>
+          <div class="group">
+            <input id="email" name="email" class="inputMaterial" type="text" required/>
+            <label id="label-email">Email</label>
+          </div>
+          <div class="group">
+            <input id="password" name="password" class="inputMaterial" type="password" required/>
+            <label>Password</label>
+          </div>
+          <span class="forget-password"><u>Forget Password?</u></span>
+          <button type="submit "id="signIn" class="signInBtn" value="Sign In">Sign In</button>
+        </form>
+          <span class="login-footer"><strong>NEW TO HERE ?</strong></span>
+          <span class="login-footer"><a href="signUp.html">Create an account</a></span>
+          <p class="login-footer">© 2017 Online Login Form. All rights reserved | Design by B1403072</p>
+    </div>
+  </div>
+  <div id="error_Message" class="error_Message fadeInDown"></div>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

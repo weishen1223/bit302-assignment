@@ -1,0 +1,20 @@
+function initApp() {
+// Listening for auth state changes.
+// [START authstatelistener]
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    // [START_EXCLUDE]
+    createUser();
+    setTimeout(function(){window.location = 'student.html';},2000);
+    // [END_EXCLUDE]
+  }else {
+    console.log('Signed Out!');
+  }
+});
+// [END authstatelistener]
+document.getElementById('signUp').addEventListener('click', handleSignUp, false);
+}
+window.onload = function() {
+  initApp();
+};

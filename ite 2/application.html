@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/others.css">
+  <link rel="stylesheet" type="text/css" href="css/div.css">
+  <link rel="stylesheet" type="text/css" href="css/application.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/application_media.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <!--INDICATOR-->
+  <!-- <div id="indicator" class="indicator">
+    <div class="loader"></div>
+  </div>
+  <div class="wrapper-flex-col body-wrapper"> -->
+  <!--END OF INDICATOR-->
+  <div class="wrapper-flex-col body-wrapper">
+    <!--NAVBAR-->
+    <div class="box navbar-box">
+      <div class="wrapper-flex navbar-wrapper">
+        <div class="box navbar-left-box">
+          <div class="wrapper-flex navbar-left-wrapper">
+            <img onclick="drawerTrigger()" style="cursor:pointer;padding-left:20px;height:30px;width:30px;"src="./img/menu_white.png" alt="menu"/>
+            <p style="padding-left:20px;">HELP Class Cancellation and Replacement</p>
+          </div>
+        </div>
+        <div class="box navbar-right-box">
+          <div class="wrapper-flex navbar-right-wrapper">
+            <!-- <span class="link-item-nav">Support</span> -->
+            <div class="dropdown link-item-nav"  onclick="accountTrigger()" >
+              <span class="dropdown-trigger" >Account</span>
+            </div>
+            <div class="link-item-nav notifications-nav">
+              <!-- <span class="notifications-num"/>
+              <span class="notifications-img"/> -->
+              <!-- <button onclick="myFacebookLogin()">Login with Facebook</button> -->
+              <!-- <fb:login-button
+                scope="public_profile,email"
+                onlogin="checkLoginState();">
+              </fb:login-button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF NAVBAR -->
+    <!--CONTENT-->
+    <div class="box content-box">
+      <div class="wrapper-flex content-wrapper">
+        <div id="account-settings" class="account-settings" >
+          <div class="top-settings">
+            <span class="close" onclick="accountTrigger()">&times;</span>
+            <div id="user_name"></div>
+            <div id="user_email"></div>
+            <span onclick=" window.location.href = 'account.html';" style="cursor:pointer;"><u>My Account</u></span>
+          </div>
+          <div class="bottom-settings">
+            <span id="signOut" style="position:absolute;right:10px;cursor:pointer;"><u>Sign out</u></span>
+          </div>
+        </div>
+
+        <!--DRAWER-->
+        <div id="drawer"class="box drawer-box">
+          <div class="wrapper-flex-col drawer-wrapper">
+            <div onloadedmetadata=""onclick=" window.location.href = 'application.html';" class="link-item drawer-item link-item-active">
+              <span>Cancellation</span>
+            </div>
+            <span onclick=" window.location.href = 'replacement.html';" class="link-item">Replacement</span>
+          </div>
+        </div>
+        <!-- END OF DRAWER -->
+
+        <div class="box items-box">
+          <div class="wrapper-flex-col items-wrapper">
+            <!-- FoORM HEARDER -->
+            <div class="form-nav">
+              <div class="header-divider form-nav-item">
+                CLASS CANCELLATION
+              </div>
+              <div class="header-divider form-nav-item">
+                CLASS REPLACEMENT
+              </div>
+            </div>
+            <!-- END OF FORM HEADER -->
+            <!-- FORM -->
+            <div class="box form-box">
+              <div class="wrapper-flex form-wrapper">
+                  <div class="box form1-box">
+                    <div class="wrapper-flex-col form1-wrapper">
+                      <form onsubmit="return false">
+                      <div class="group">
+                        <input id="subject_code" class="inputMaterial" type="text" required/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Subject Code</label>
+                      </div>
+                  	  <div class="group">
+                        <input id="cancel_date" class="inputMaterial" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" required/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Date</label>
+                      </div>
+                      <div class="group">
+                        <input id="cancel_startTime" class="inputMaterial" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" required/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Class Start Time</label>
+                      </div>
+                      <div class="group">
+                        <input id="cancel_endTime" class="inputMaterial" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" required/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Class End Time</label>
+                      </div>
+                      <div class="group">
+                        <!-- <select id="cancel_venue" class="inputMaterial standardSelect" required>
+                          <option value="" disabled selected hidden></option>
+                          <option value="SR2.1">SR2.1</option>
+                          <option value="SR2.2">SR2.2</option>
+                          <option value="LH2.1">LH2.1</option>
+                          <option value="LS2">LS2</option>
+                        </select> -->
+                        <input id="cancel_venue" class="inputMaterial" type="text" required/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Venue</label>
+                      </div>
+                      <div class="group">
+                        <input id="cancel_reason" class="inputMaterial" type="text" required/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Reason</label>
+                      </div>
+                      <div class="group">
+                        <button id="apply" onclick="applyJSON()" class="button">Apply</button>
+                        <button type="reset" class="button">Clear</button>
+                        <!-- <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> -->
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                  <div class="box form2-box">
+                    <div class="wrapper-flex-col form2-wrapper">
+                      <div class="group">
+                          <input id="checkReplace" type="checkbox" name="confirmReplace" value="Yes" /> Apply For Replacement Now?
+                      </div>
+                  	  <div class="group">
+                        <input id="inputReplace" class="inputMaterial" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" required disabled/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Replacement Date</label>
+                      </div>
+                      <div class="group">
+                        <input id="inputReplace2" class="inputMaterial" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" required disabled/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Replacement Start Time</label>
+                      </div>
+                      <div class="group">
+                        <input id="inputReplace3" class="inputMaterial" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" required disabled/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Replacement End Time</label>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <!-- END OF FORM -->
+            <div class="header-divider">
+              HISTORY
+            </div>
+            <div class="box table-box">
+              <div class="wrapper table-wrapper">
+                <table id="test-table">
+                  <noscript>[Notice: JavaScript is not enabled. Please Enable JavaScript.]</noscript>
+                  <thead>
+                    <tr>
+                      <th>Subject Code</th>
+                      <th>Date</th>
+                      <th>Start Time</th>
+                      <th>End Time</th>
+                      <th>Venue</th>
+                      <th>Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr></tr>
+                  </tbody>
+                  <tfoot>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF CONTENT -->
+  </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script type="text/javascript" src="js/apply.js"></script>
+<script type="text/javascript" src="js/facebook.js"></script>
+<!-- <script type="text/javascript" src="js/facebook.js"></script> -->
+
+</html>

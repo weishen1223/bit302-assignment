@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOGIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/signUp.css">
+  <link rel="stylesheet" type="text/css" href="css/signUp_media.css">
+  <link href="https://fonts.googleapis.com/css?family=Signika:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper-flex-col body-wrapper">
+  <div class="box login-box">
+    <form onsubmit="return false">
+      <div class="wrapper-flex-col login-wrapper">
+        <div class="group login-header">
+            HELP University Class System
+        </div>
+        <div class="group">
+          <input id="username" name="username" class="inputMaterial" type="text" required/>
+          <label>Username</label>
+        </div>
+        <div class="group">
+          <input id="email" name="email" class="inputMaterial" type="text" onchange="checkEmail()" required/>
+          <label id="label-email">Email</label>
+        </div>
+        <div class="group">
+          <input id="password" name="password" class="inputMaterial" type="password" onkeyup="checkPassword()" required/>
+          <label id="label-password">Password</label>
+        </div>
+        <div class="group">
+          <input id="confirm_password" name="confirm_password" class="inputMaterial" type="password" onkeyup="checkPassword()" required/>
+          <label id="label-confirm_password" >Confirm Password</label>
+        </div>
+        <button id="signUp" class="signUpBtn">Sign Up</button>
+        <p class="login-footer"><a href="index.html"><u>Already got account?</u></a></p>
+        <p class="login-footer">© 2017 Online Register Form. All rights reserved | Design by B1403072</p>
+      </div>
+    </form>
+  </div>
+  <div id="error_Message" class="error_Message fadeInDown"></div>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script type="text/javascript" src="js/signUp.js"></script>
+</html>

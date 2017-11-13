@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/others.css">
+  <link rel="stylesheet" type="text/css" href="css/div.css">
+  <link rel="stylesheet" type="text/css" href="css/student.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/student_media.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <!--INDICATOR-->
+  <!-- <div id="indicator" class="indicator">
+    <div class="loader"></div>
+  </div> -->
+  <div class="wrapper-flex-col body-wrapper">
+  <!--END OF INDICATOR-->
+  <div class="wrapper-flex-col body-wrapper">
+    <!--NAVBAR-->
+    <div class="box navbar-box">
+      <div class="wrapper-flex navbar-wrapper">
+        <div class="box navbar-left-box">
+          <div class="wrapper-flex navbar-left-wrapper">
+            <img onclick="drawerTrigger()" style="cursor:pointer;padding-left:20px;height:30px;width:30px;"src="./img/menu_white.png" alt="menu"/>
+            <p style="padding-left:20px;">HELP Class Cancellation and Replacement</p>
+          </div>
+        </div>
+        <div class="box navbar-right-box">
+          <div class="wrapper-flex navbar-right-wrapper">
+            <!-- <span class="link-item-nav">Support</span> -->
+            <div class="dropdown link-item-nav"  onclick="accountTrigger()" >
+              <span class="dropdown-trigger" >Account</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF NAVBAR -->
+    <!--CONTENT-->
+    <div class="box content-box">
+      <div class="wrapper-flex content-wrapper">
+        <div id="account-settings" class="account-settings" >
+          <div class="top-settings">
+            <span class="close" onclick="accountTrigger()">&times;</span>
+            <div id="user_name"></div>
+            <div id="user_email"></div>
+            <span onclick=" window.location.href = 'account.html';" style="cursor:pointer;"><u>My Account</u></span>
+          </div>
+          <div class="bottom-settings">
+            <span id="signOut" style="position:absolute;right:10px;cursor:pointer;"><u>Sign out</u></span>
+          </div>
+        </div>
+        <!--DRAWER-->
+        <div id="drawer"class="box drawer-box">
+          <div class="wrapper-flex-col drawer-wrapper">
+            <div onloadedmetadata="" class="link-item drawer-item link-item-active">
+              <span>Classes</span>
+            </div>
+            <!-- <span class="link-item">Lecturer</span> -->
+          </div>
+        </div>
+        <!-- END OF DRAWER -->
+        <div class="box items-box">
+          <div class="wrapper-flex-col items-wrapper">
+            <div class="card-nav">
+              <div class="header-divider card-nav-item">
+                CLASS CANCELLATION
+              </div>
+              <div class="header-divider card-nav-item">
+                CLASS REPLACEMENT
+              </div>
+            </div>
+            <!-- CARD LIST -->
+            <div class="box card-box">
+              <div class="wrapper-flex card-wrapper">
+                  <div class="box card1-box">
+                    <div id="cancellation" class="wrapper-flex-col card1-wrapper">
+
+                      <!-- <div class="card">
+                        <div class="container">
+                          <p><b>BIT304</b></p>
+                          <p>Finaly Year Project 1</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="container">
+                          <p><b>BIT310</b></p>
+                          <p>Business Development Plan</p>
+                        </div>
+                      </div> -->
+
+                    </div>
+                  </div>
+                  <div class="box card2-box">
+                    <div id="replacement" class="wrapper-flex-col card2-wrapper">
+
+                      <!-- <div class="card">
+                        <div class="container">
+                          <p><b>BIT320</b></p>
+                          <p>Internship</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="container">
+                          <p><b>BIT305</b></p>
+                          <p>Final Year Project 2</p>
+                        </div>
+                      </div> -->
+
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <!-- END OF FORM -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF CONTENT -->
+  </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script type="text/javascript" src="js/student.js"></script>
+
+</html>
